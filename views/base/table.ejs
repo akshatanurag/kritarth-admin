@@ -1,0 +1,48 @@
+<main class="col-sm-9 col-md-10 pt-3">
+  <h1 style="text-align:center;">Kalinga Institute of Industrial Technology</h1>
+  <h2><%= data.deptName %></h2><hr><br>
+  
+  <h4><%= data.eventName %></h4>
+  <ul style="list-style: none;float: right;">
+      <li><b>Not Paid :</b> <%- total - paidCount %></li>
+  <li ><b>Paid :</b> <%= paidCount %></li>
+  
+  <li>
+    <b>Total :</b> <%= total %>
+  </li>
+  <li>
+    <a href="download/<%= id %>">Download as excel </a>
+    </li>
+</ul>
+  <div class="table-responsive">
+    <table class="table table-striped">
+
+      <thead>
+        <tr>
+          <th> KFID </th>
+          <th> Name </th>
+          <th> Email </th>
+          <th> Phone </th>
+          <th>Payment Status</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% data.event.forEach(user => { %>
+        <tr>
+            <td> <%= user.id %></td>
+            <td> <%= user.name %> </td>
+            <td> <%= user.email %> </td>
+            <td> <%= user.phone %> </td>
+            <% if(user.isPaid == 1) { %>
+            <td>Paid</td>
+            <% } else { %>
+            <td>Not Paid</td>
+            <% } %>
+        </tr>
+      <% }); %>
+      </tbody>
+    </table>
+  </div>
+</main>
+
+
