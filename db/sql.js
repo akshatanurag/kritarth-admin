@@ -1,6 +1,6 @@
 const mysql = require("mysql");
 const connection = mysql.createConnection({
-    host: "http://kritarth.org/comingsoon/phpmyadmin",
+    host: "148.72.88.29",
     user: "mvhu5p2y1vz4",
     password: "Kritarth@2019#",
     database: "kritarth"
