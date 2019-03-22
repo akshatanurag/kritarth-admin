@@ -40,7 +40,7 @@ app.get("/",(req,res)=>{
 });
 
 
-var port = process.env.PORT || 3030;
+var port = process.env.PORT || 4000;
 
 app.listen(port,process.env.IP,()=>{
   console.log(`Server is up on ${port}`);
